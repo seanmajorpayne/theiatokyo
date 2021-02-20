@@ -1,10 +1,7 @@
 import os
 import json
-import locale
 #from dotenv import load_dotenv    MOVE TO INIT FILE
 #load_dotenv()
-
-locale.setlocale(locale.LC_ALL, 'en_US')
 
 import google_auth_oauthlib.flow
 from googleapiclient.discovery import build
