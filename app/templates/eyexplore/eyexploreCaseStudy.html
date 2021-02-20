@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://kit.fontawesome.com/3f42e8ba38.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+		crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<title>Theia | Eyexplore Case Study</title>
+		<meta name="description" content="Theia is a Tokyo-based creative group focused on video production. Our mission is to help brands reach a foreign audience.">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+		<link rel="manifest" href="{{ url_for('static', filename='favicon_package_v0.16/site.webmanifest') }}">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body id="home" data-spy="scroll" data-target="#main-nav">
+		
+		<!-- start here -->
+		
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top py-4" id="main-nav">
+			<div class="container">
+				<a href="{{ url_for('index', _anchor='home')}}" class="navbar-brand">
+					<img src="{{ url_for('static', filename='img/theia_logo.svg') }}" width="132" height="66" alt="">
+				</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="{{ url_for('index') }}" class="nav-link">Back to Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<header id="home" class="pt-100">
+			<div class="overlay"></div>
+			<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="{{ url_for('static', filename='video/eye.mp4') }}" type="video/mp4">
+			</video>
+			<div class="container h-100">
+				<div class="d-flex h-100 text-center align-items-center">
+					<div class="w-100 text-white">
+						<h1 class="display-3">EYExplore</h1>
+						<p class="lead mb-0">You Don't Need to Challenge Your Eye to See Their Results</p>
+					</div>
+				</div>
+			</div>			
+		</header>
+		
+		<section id="about" class="bg-dark py-4 text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-white pb-4">
+						<h3>While Working with Theia</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<h3 style="color:#00FF00">+{{ views }}</h3>
+						<p class="text-white">Views</p>
+					</div>
+					<div class="col-md-4">
+						<h3 style="color:#00FF00">+{{ subscribers }}</h3>
+						<p class="text-white">Subscribers</p>
+					</div>
+					<div class="col-md-4">
+						<h3 style="color:#00FF00">+24</h3>
+						<p class="text-white">Videos</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		
+		<section id="about" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="pb-3" style="color:#00bfe8">
+							EYExplore Overview
+						</h1>
+					</div>
+					<div class="col-md-6">
+						<p>EYExplore is a leading provider of Photography Adventures in Japan. Their instructors have a deep knowledge of their cities and aim to provide fun and engaging photo workshops.</br></br>
+						EYExplore approached us with the challenge of creating engaging content for their YouTube channel. They had not uploaded to YouTube in over a year, because other video production groups were not cost effective.</br></br>
+						By collaborating closely with their team, we were able to take their small channel and turn it into a serious competitor on YouTube.
+						</p>
+					</div>
+					<div class="col-md-6 align-items-center d-flex flex-wrap">
+						<img src="{{ url_for('static', filename='img/eyexplore/eyexplore_on_light.png') }}" class="mx-auto align-middle d-block" width="90%" alt="">						
+					</div>
+				</div>
+				<div class="row my-3">
+					<div class="col-md-3">
+						<img src="{{ url_for('static', filename='img/eyexplore/lc.png') }}" width="90%" alt="">											
+					</div>
+					<div class="col-md-3">
+						<img src="{{ url_for('static', filename='img/eyexplore/redcamera.png') }}" width="90%" alt="">											
+					</div>
+					<div class="col-md-3">
+						<img src="{{ url_for('static', filename='img/eyexplore/geisha_in.png') }}" width="90%" alt="">											
+					</div>
+					<div class="col-md-3">
+						<img src="{{ url_for('static', filename='img/eyexplore/green.png') }}" width="90%" alt="">											
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About / Why -->
+		
+		<section id="about" class="py-4 text-center" style="background:linear-gradient(0deg, rgba(0, 191, 232, 0.7), rgba(0, 191, 232, 0.7)), url({{ url_for('static', filename='img/sean_white.jpg')}})">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="info-header">
+							<p class="lead text-white pt-3 font-italic lead">
+								Customers are consistently listing "Youtube" as the way they found us.
+							</p>
+							<p class="text-white pt-2">
+								- Lukasz Palka, EYExplore Co-Founder
+							</p>
+						</div>
+						<img src="{{ url_for('static', filename='img/lukasz.jpg') }}" alt="" style="max-width:100px" class="img-fluid rounded-circle w-25 mb-3">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="about" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="pb-5" style="color:#00bfe8">
+							What did we do?
+						</h1>
+					</div>
+					<div class="col-md-6">
+						<p>We started out by educating EYExplore on the fundamentals of Youtube, covering everything from keyword choice to video design.</br></br>
+						We then worked closely with their team to shoot videos showcasing their deep knowledge of Tokyo & Photography.</br></br>
+						After each video, we took feedback from their team and made iterative improvements to the quality of their videos.
+						</p>
+					</div>
+					<div class="col-md-6 align-items-center d-flex flex-wrap">
+						<img src="{{ url_for('static', filename='img/eyexplore/axel.png') }}" class="mx-auto align-middle d-block" width="90%" alt="">						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter -->
+		
+		<section id="newsletter" class="bg-light text-white py-4">
+			<div class="container">
+				<div class="row justify-content-center">
+					<h2 class="display-5 mb-3 text-dark">
+						Get a Free Strategy Call
+					</h2>
+				</div>
+				<form action="https://formspree.io/mqkkqzgn" method="POST" encType="multipart/form-data">
+					<div class="row">
+							<div class="col-md-4">
+								<input type="text" class="form-control form-control-lg mb-resp" name="Name" placeholder="Enter Name">
+							</div>
+							<div class="col-md-4">
+								<input type="email" class="form-control form-control-lg mb-resp" name="_replyto" placeholder="Email">
+							</div>
+							<input type="hidden" name="_subject" value="Email List Subscribe Request">
+							<input type="hidden" name="_confirmation" value="Your message has been sent!">
+							<input type="hidden" name="_after" value="https://mofufilms.com">					
+						<div class="col-md-4">
+							<button class="btn btn-warning btn-lg btn-block" style="color:white">
+								<i class="fas fa-envelope"></i> Let's Talk
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>	
+		</section>
+
+		<section id="about" class="py-4 text-center" style="background:linear-gradient(0deg, rgba(0, 191, 232, 0.7), rgba(0, 191, 232, 0.7)), url({{ url_for('static', filename='img/sean_white.jpg')}})">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mt-3 mb-5">
+						<h2 class="text-white">Audio Quality</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<p class="text-white mb-5">
+							Since the majority of EYExplore's videos are shot in downtown Tokyo, our ability to capture and master high-quality audio is imperative to keep audience retention high. Take a listen for yourself.</br></br>
+							We guarantee you'll hear the difference.
+						</p>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-2">
+						<h3 class="text-white mb-3">Audio Before</h3>
+						<audio controls>
+  							<source src="{{ url_for('static', filename='audio/eyexplore_before.mp3')}}" type="audio/mpeg">
+  						</audio>
+					</div>
+					<div class="col-md-6 mb-2">
+						<h3 class="text-white mb-3">Audio After</h3>
+						<audio controls>
+  							<source src="{{ url_for('static', filename='audio/eyexplore_after.mp3')}}" type="audio/mpeg">
+  						</audio>					
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		
+		<section id="contact" class="bg-light py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 mx-auto">
+						<h3>Get In Touch</h3>
+						<p class="lead2">Request a Free Strategy Call</p>
+						<form action="https://formspree.io/mqkkqzgn" method="POST" encType="multipart/form-data">
+							<div class="input-group input-group-lg mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										<i class="fas fa-user"></i>
+									</span>
+								</div>
+								<input class="form-control" type="text" name="name" placeholder="Name">
+							</div>
+							
+							<div class="input-group input-group-lg mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										<i class="fas fa-envelope"></i>
+									</span>
+								</div>
+								<input class="form-control" type="email" name="_replyto" placeholder="Email">
+							</div>
+
+							<div class="input-group input-group-lg mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										<i class="fas fa-pencil-alt"></i>
+									</span>
+								</div>
+								<textarea class="form-control" placeholder="Message" name="message" rows="5"></textarea>
+							</div>
+							<input type="hidden" name="_honeypot" value="">
+							<input type="hidden" name="_subject" value="Contact form submitted">
+							<input type="hidden" name="_confirmation" value="Your message has been sent!">
+							<input type="hidden" name="_after" value="https://mofufilms.com">
+							<input type="submit" value="Send" class="btn btn-warning btn-block btn-lg" style="color:white">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Footer-->
+		
+		<footer id="main-footer" class="py-5 bg-dark text-white">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6 mx-auto text-center">
+						<p class="lead">
+							Copyright &copy; <span id="year"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<script
+				src="http://code.jquery.com/jquery-3.4.1.min.js"
+				integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+				crossorigin="anonymous">
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"0b59ab80b6a94aea1a25403b8","lid":"e64003f44b","uniqueMethods":true}) })</script>
+			<script>
+				// Get current copyright year
+				$('#year').text(new Date().getFullYear());
+			
+				// initialize Scrollspy
+				$('body').scrollspy({target: '#main-nav'});
+			
+				// Smooth Scrolling
+				$("#main-nav a").on('click', function (event) {
+					if (this.hash !== "") {
+						event.preventDefault();
+					
+						const hash = this.hash;
+					
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function() {
+					
+							window.location.hash = hash;
+						});
+					}
+				});
+			</script>
+		</footer>
+	</body>
+</html>
