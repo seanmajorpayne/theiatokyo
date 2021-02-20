@@ -1,4 +1,4 @@
-from google_api import GoogleApiConnect
+from app.google.google_api import GoogleApiConnect
 import locale
 
 class Client:
@@ -11,25 +11,21 @@ class Client:
         self.name = None
         self.video_ids = None           # list of Strings
         self.channel_id = None          # String
-        self.views = 0
-        self.subscribers = 0
+        self.views = None
+        self.subscribers = None
         self.api = GoogleApiConnect()
         locale.setlocale(locale.LC_ALL, 'en_US')
 
-    def get_views(self):
-        """ Returns client views as Int"""
-        return self.views
-
-    def get_subscribers(self):
-        """ Returns client subscribers as Int"""
-        return self.subscribers
+    def get_video_count(self):
+        return len(self.video_ids)
 
     def get_views(self):
         """
         Queries Google API for the client's video views
         :returns views (ex. "1,240,340")
         """
-        self.views = self.api.get_video_views(self.video_ids)
+        if not self.views:
+            self.views = self.api.get_video_views(self.video_ids)
         views_as_string = self.format_views()
         return views_as_string
 
@@ -46,7 +42,6 @@ class Client:
         """
         subscribers_as_string = self.format_subscribers()
         return self.subscribers
-
 
     def format_subscribers(self):
         """
