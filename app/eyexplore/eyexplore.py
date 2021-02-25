@@ -38,7 +38,7 @@ class Eyexplore(Client):
     def get_subscribers(self):
         """
         Eyexplore's subscribers can't be pulled from video data,
-        so using an estimate based on YT graphs for now.
+        so using an approximation based on YT graphs for now.
 
         :returns subscriber count as String
         """
@@ -53,6 +53,6 @@ class Eyexplore(Client):
         try:
             return super().get_views()
         except:
-            return "168,900"    # Last known value
+            return "216,827"    # Last known value
 
 
