@@ -1,22 +1,23 @@
 import os
 import json
-#from dotenv import load_dotenv    MOVE TO INIT FILE
-#load_dotenv()
+
+# from dotenv import load_dotenv    MOVE TO INIT FILE
+# load_dotenv()
 
 import google_auth_oauthlib.flow
 from googleapiclient.discovery import build
 import googleapiclient.errors
 
-class GoogleApiConnect:
 
+class GoogleApiConnect:
     def __init__(self):
         """
         Creates a Google API Connection which is used to pull Youtube data.
         The data contains statistics for Theia Tokyo produced Youtube videos.
         """
-        self.youtube = None         # Build object to connect to API
-        self.channel_data = None    # JSON
-        self.video_data = None      # JSON
+        self.youtube = None  # Build object to connect to API
+        self.channel_data = None  # JSON
+        self.video_data = None  # JSON
         self.views = 0
         self.subscribers = 0
         self.build_service()
@@ -47,8 +48,8 @@ class GoogleApiConnect:
         """
         try:
             request = self.youtube.channels().list(
-                part = "statistics",
-                id = url_id,
+                part="statistics",
+                id=url_id,
             )
             return request.execute()
 
@@ -65,12 +66,14 @@ class GoogleApiConnect:
         :param clients: Dictionary of clients & their channel IDs
         :return: None
         """
-        self.channel_data = self.request_channels(','.join(
-            [id for channel, id in clients.items()]
-        ))
+        self.channel_data = self.request_channels(
+            ",".join([id for channel, id in clients.items()])
+        )
         for i in range(len(clients)):
-            self.views += int(self.channel_data['items'][i]['statistics']['viewCount'])
-            self.subscribers += int(self.channel_data['items'][i]['statistics']['subscriberCount'])
+            self.views += int(self.channel_data["items"][i]["statistics"]["viewCount"])
+            self.subscribers += int(
+                self.channel_data["items"][i]["statistics"]["subscriberCount"]
+            )
 
     def request_videos(self, url_id):
         """
@@ -82,8 +85,8 @@ class GoogleApiConnect:
         """
         try:
             request = self.youtube.videos().list(
-                part = "statistics",
-                id = url_id,
+                part="statistics",
+                id=url_id,
             )
             return request.execute()
 
@@ -100,15 +103,8 @@ class GoogleApiConnect:
         :param videos:
         :return:
         """
-        self.video_data = self.request_videos(','.join(
-            [video for video in videos]
-        ))
+        self.video_data = self.request_videos(",".join([video for video in videos]))
         for i in range(len(videos)):
-            self.views += int(self.video_data['items'][i]['statistics']['viewCount'])
+            self.views += int(self.video_data["items"][i]["statistics"]["viewCount"])
 
         return self.views
-
-
-
-
-
