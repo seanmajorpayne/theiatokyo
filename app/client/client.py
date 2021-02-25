@@ -1,6 +1,7 @@
 from app.google.google_api import GoogleApiConnect
 import locale
 
+
 class Client:
     def __init__(self):
         """
@@ -9,12 +10,12 @@ class Client:
         information.
         """
         self.name = None
-        self.video_ids = None           # list of Strings
-        self.channel_id = None          # String
+        self.video_ids = None  # list of Strings
+        self.channel_id = None  # String
         self.views = None
         self.subscribers = None
         self.api = GoogleApiConnect()
-        locale.setlocale(locale.LC_ALL, 'en_US')
+        locale.setlocale(locale.LC_ALL, "en_US")
 
     def get_video_count(self):
         return len(self.video_ids)

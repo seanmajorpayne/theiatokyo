@@ -17,9 +17,11 @@ def create_app(config_class=DevelopmentConfig):
 
     with app.app_context():
         from app.eyexplore import bp as eyexplore_bp
+
         app.register_blueprint(eyexplore_bp)
 
         from app.index import bp as index_bp
+
         app.register_blueprint(index_bp)
 
     return app
