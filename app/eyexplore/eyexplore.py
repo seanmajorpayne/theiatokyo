@@ -1,10 +1,10 @@
 from app.client.client import Client
 
-def Eyexplore(Client):
+class Eyexplore(Client):
 
     def __init__(self):
         super().__init__()
-        self.channel_id = UC4T6TqCs8MD3fE32ROVjEsg
+        self.channel_id = "UC4T6TqCs8MD3fE32ROVjEsg"
         self.video_ids = [
             "JK-lDGYBK2k",      # Better Street Photos
             "-DwLO7cb1F0",      # Silhouette
