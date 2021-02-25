@@ -1,0 +1,135 @@
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+
+body {
+  margin-top: 105px; }
+
+
+.navbar {
+  box-shadow: 2px 2px 5px #00bfe8;
+  background: #000; }
+  .navbar .nav-item {
+  	color: #fff;
+    font-size: 1.4rem;
+    padding-right: 1.4rem; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+
+.bg-dark{
+	background-color: black !important;
+}
+
+#showcase {
+  position: relative;
+  background: url("../img/city3.jpg");
+  background-repeat: no-repeat;
+  min-height: 700px; 
+  max-height: 700px; }
+  #showcase .primary-overlay {
+    background: rgba(255, 194, 25, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.info-header {
+  width: 100%;
+  margin: auto;
+}
+
+#clients {
+	font-size: 1rem;
+}
+
+#clientLogos {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#mission {
+	width: 75%;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lead2 {
+	font-size: 1.75rem;
+	font-weight: 300;
+}
+
+#icon {
+	color: #17a2b8;
+}
+
+#authors img {
+  margin-top: -50px; }
+#authors .card:hover {
+  background: #ffc219;
+  color: #fff; }
+  #authors .card:hover .fab {
+    color: #fff; }
+
+@media (max-width: 768px) {
+  #showcase {
+    min-height: 500px; }
+    #showcase h1 {
+      font-size: 4rem; }
+
+  .mb-resp {
+    margin-bottom: 1rem; } }
+    
+    
+#privacy_body {
+	padding: 20px;
+	padding-top: 40px;
+}
