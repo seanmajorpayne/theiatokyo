@@ -7,6 +7,7 @@ from config import DevelopmentConfig
 cache = Cache()
 bootstrap = Bootstrap()
 
+
 def create_app(config_class=DevelopmentConfig):
     app = Flask(__name__)
     app.config.from_object(config_class)
