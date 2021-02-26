@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://kit.fontawesome.com/3f42e8ba38.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<title>Theia | Eyexplore Case Study</title>
+		<meta name="description" content="Theia is a Tokyo-based creative group focused on video production. Our mission is to help brands reach a foreign audience.">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+		<link rel="manifest" href="{{ url_for('static', filename='favicon_package_v0.16/site.webmanifest') }}">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body id="home" data-spy="scroll" data-target="#main-nav">
+
+		<!-- start here -->
+
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top py-4" id="main-nav">
+			<div class="container">
+				<a href="{{ url_for('index.index', _anchor='home')}}" class="navbar-brand">
+					<img src="{{ url_for('static', filename='img/theia_logo.svg') }}" width="132" height="66" alt="">
+				</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="{{ url_for('index.index') }}" class="nav-link">Back to Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<header id="home" class="pt-100">
+			<div class="overlay"></div>
+			<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="{{ url_for('static', filename='video/eye.mp4') }}" type="video/mp4">
+			</video>
+			<div class="container h-100">
+				<div class="d-flex h-100 text-center align-items-center">
+					<div class="w-100 text-white">
+						<h1 class="display-3">EYExplore</h1>
+						<p class="lead mb-0">You Don't Need to Challenge Your Eye to See Their Results</p>
+					</div>
+				</div>
+			</div>
+		</header>
+    </body>
+</html>
