@@ -66,11 +66,6 @@
 			</div>
 		</header>
 
-		<!-- Showcase
-		<section id="showcase" class="py-5">
-		</section>
-		-->
-
 		<!-- About / Why -->
 
 		<section id="about" class="bg-dark py-4 text-center">
@@ -93,11 +88,11 @@
 		<section id="about" class="py-5">
 			<div class="container">
 				<div class="info-header mb-5 text-center">
-					<h1 class="pb-3" style="color:#00bfe8">
+					<h1 class="pb-3 pt-5" style="color:#00bfe8">
 						Our Mission
 					</h1>
 				</div>
-				<div class="row align-items-center">
+				<div class="row align-items-center pb-5">
 					<p id="mission" class="lead2 text-center">
 						<strong>Our goal is to help Japanese brands acquire foreign business.</strong> Theia provides video production services & Youtube consulting. With a deep understanding of Youtube's algorithm, we've driven over a million views across personal & client channels.
 					</p>
@@ -105,26 +100,45 @@
 			</div>
 		</section>
 
-		<section id="about" class="py-4 text-center" style="background:linear-gradient(0deg, rgba(0, 191, 232, 0.7), rgba(0, 191, 232, 0.7)), url({{ url_for('static', filename='img/sean_white.jpg')}})">
-			<div class="container">
+		<section id="about" class="py-5" style="background:linear-gradient(0deg, rgba(248, 248, 248, 0.7), rgba(248, 248, 248, 0.7)), url({{ url_for('static', filename='img/sean_white.jpg')}})">
+			<div class="container py-4 text-center">
 				<div class="row py-5">
 					<div class="col-md-12">
-						<h1 class="text-white">Featured Client</h1>
+						<h1 class="text-black">Featured Client Work</h1>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 my-auto">
+						<img src="{{ url_for('static', filename='img/eyexplore/eyexplore_on_light.png') }}" class="d-block mb-3" width="45%" alt="">
+						<p>With our carefully crafted videos, we've driven 9,400 subscribers for our client EYExplore.</p>
+						<a class="btn btn-warning btn-large text-white font-weight-bold mb-4" href="{{ url_for('eyexplore.eyexplore_case')}}" role="button">Read the Story</a>
+					</div>
+					<div class="py-5 col-md-6 align-items-center d-flex flex-wrap">
+						<img src="{{ url_for('static', filename='img/eyexplore/geisha.png') }}" class="mx-auto align-middle d-block" width="90%" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="about" class="py-5">
+			<div class="container py-4 text-center">
+				<div class="row py-5">
+					<div class="col-md-12">
+						<h1 class="text-black">Featured Documentary Work</h1>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 my-auto">
-						<img src="{{ url_for('static', filename='img/eyexplore/eyexplore_on_light.png') }}" class="d-block mb-3" width="45%" alt="">
-						<p>With our carefully crafted videos, we've driven {{ subscribers_eye }} subscribers for our client EYExplore.</p>
+						<h2>Life of a Japanese Hikikomori</h2>
+						<p>5,000,000+ views. $34,000+ in Fundraising. 1 life changed.</p>
 						<a class="btn btn-warning btn-large text-white font-weight-bold mb-4" href="{{ url_for('eyexplore.eyexplore_case')}}" role="button">Read the Story</a>
 					</div>
-					<div class="col-md-6 align-items-center d-flex flex-wrap">
-						<img src="{{ url_for('static', filename='img/eyexplore/geisha.png') }}" class="mx-auto align-middle d-block" width="90%" alt="">
+					<div class="py-5 col-md-6 align-items-center d-flex flex-wrap">
+						<img src="{{ url_for('static', filename='img/nito.jpg') }}" class="mx-auto align-middle d-block" width="90%" alt="">
 					</div>
 				</div>
 			</div>
@@ -166,7 +180,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="info-header mb-5">
-							<h1 class="pb-3" style="color:#00bfe8">
+							<h1 class="pb-3 pt-5" style="color:#00bfe8">
 								Meet The Team
 							</h1>
 							<p class="lead">
