@@ -1,5 +1,4 @@
 from flask import render_template
-from app.google import google_api
 from app.eyexplore.eyexplore import Eyexplore
 
 from app.eyexplore import bp
@@ -18,5 +17,5 @@ def eyexplore_case():
         video_count=video_count,
         views=views,
         subscribers=subscribers,
-        year=2020,
+        year=2021,
     )
